@@ -8,7 +8,8 @@ namespace aflevering7777
             BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
 
         public static AppBuilder BuildAvaloniaApp() =>
-            AppBuilder.Configure<App>()
+            AppBuilder
+                .Configure<App>()
                 .UsePlatformDetect()
                 .LogToTrace();
     }

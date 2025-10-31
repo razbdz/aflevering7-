@@ -71,3 +71,4 @@
 /Users/Razije/RiderProjects/aflevering7777/aflevering7777/obj/Debug/net9.0/afleveri.238B044B.Up2Date
 /Users/Razije/RiderProjects/aflevering7777/aflevering7777/obj/Debug/net9.0/aflevering7777.genruntimeconfig.cache
 /Users/Razije/RiderProjects/aflevering7777/aflevering7777/obj/Debug/net9.0/ref/aflevering7777.dll
+/Users/Razije/RiderProjects/aflevering7777/aflevering7777/obj/Debug/net9.0/aflevering7777.sourcelink.json
