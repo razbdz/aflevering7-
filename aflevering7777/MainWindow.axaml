@@ -1,2 +1,13 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="aflevering7777.MainWindow"
+    Title="Inventory System"
+    Width="900" Height="640">
 
-
+    <Grid Margin="16">
+        <TextBlock Text="Hej! Vinduet virker 😄"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+    </Grid>
+</Window>

@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace aflevering7777
+namespace aflevering7777   // ← lille l, præcis sådan
 {
     public partial class App : Application
     {
@@ -15,7 +15,7 @@ namespace aflevering7777
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                desktop.MainWindow = new MainWindow();
+ 
             }
 
             base.OnFrameworkInitializationCompleted();
