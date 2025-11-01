@@ -19,10 +19,4 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
     </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="MainWindowViewModel.cs">
-        <DependentUpon>ViewModels</DependentUpon>
-      </Compile>
-    </ItemGroup>
 </Project>

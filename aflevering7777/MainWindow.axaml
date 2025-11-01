@@ -1,0 +1,50 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:aflevering7777"
+    x:Class="aflevering7777.MainWindow"
+    x:DataType="vm:MainWindowViewModel"
+    Title="Item Sorter Robot"
+    Width="900" Height="640">
+
+    <!-- Sæt DataContext i XAML, så design-time også virker -->
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="12">
+
+            <!-- Knapper -->
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <Button Content="Process Next Order" Command="{Binding ProcessNextOrderCommand}"/>
+                <Button Content="Process Order (Robot)" Command="{Binding ProcessOrderRobotCommand}"/>
+            </StackPanel>
+
+            <!-- Kø -->
+            <TextBlock Text="Queued Orders" FontSize="18"/>
+            <ListBox ItemsSource="{Binding QueuedOrders}" Height="120"/>
+
+            <!-- Behandlede -->
+            <TextBlock Text="Processed Orders" FontSize="18"/>
+            <ListBox ItemsSource="{Binding ProcessedOrders}" Height="120"/>
+
+            <!-- Omsætning -->
+            <TextBlock Text="{Binding TotalRevenueText}" FontSize="18"/>
+
+            <!-- Lager -->
+            <TextBlock Text="Inventory:" FontSize="18"/>
+            <Border Background="#262626" CornerRadius="8" Padding="12">
+                <TextBlock Text="{Binding InventoryText}"/>
+            </Border>
+
+            <!-- Status -->
+            <Border Background="#111" CornerRadius="8" Padding="12" Height="140">
+                <ScrollViewer>
+                    <TextBlock Text="{Binding StatusMessages}" FontFamily="Consolas, Menlo, monospace" TextWrapping="Wrap"/>
+                </ScrollViewer>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>
