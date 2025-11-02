@@ -7,18 +7,12 @@
     Title="Item Sorter Robot"
     Width="900" Height="640">
 
-    <!-- Sæt DataContext i XAML, så design-time også virker -->
-    <Window.DataContext>
-        <vm:MainWindowViewModel/>
-    </Window.DataContext>
-
     <ScrollViewer>
         <StackPanel Margin="16" Spacing="12">
 
-            <!-- Knapper -->
             <StackPanel Orientation="Horizontal" Spacing="12">
-                <Button Content="Process Next Order" Command="{Binding ProcessNextOrderCommand}"/>
-                <Button Content="Process Order (Robot)" Command="{Binding ProcessOrderRobotCommand}"/>
+                <Button Content="Process Next Order" Click="OnProcessNextOrder"/>
+                <Button Content="Process Order (Robot)" Click="OnProcessOrderRobot"/>
             </StackPanel>
 
             <!-- Kø -->
@@ -39,7 +33,7 @@
             </Border>
 
             <!-- Status -->
-            <Border Background="#111" CornerRadius="8" Padding="12" Height="140">
+            <Border Background="#114" CornerRadius="8" Padding="12" Height="140">
                 <ScrollViewer>
                     <TextBlock Text="{Binding StatusMessages}" FontFamily="Consolas, Menlo, monospace" TextWrapping="Wrap"/>
                 </ScrollViewer>
