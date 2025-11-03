@@ -15,24 +15,23 @@
                 <Button Content="Process Order (Robot)" Click="OnProcessOrderRobot"/>
             </StackPanel>
 
-            <!-- Kø -->
+        
             <TextBlock Text="Queued Orders" FontSize="18"/>
             <ListBox ItemsSource="{Binding QueuedOrders}" Height="120"/>
 
-            <!-- Behandlede -->
+        
             <TextBlock Text="Processed Orders" FontSize="18"/>
             <ListBox ItemsSource="{Binding ProcessedOrders}" Height="120"/>
 
-            <!-- Omsætning -->
+   
             <TextBlock Text="{Binding TotalRevenueText}" FontSize="18"/>
 
-            <!-- Lager -->
+        
             <TextBlock Text="Inventory:" FontSize="18"/>
             <Border Background="#262626" CornerRadius="8" Padding="12">
                 <TextBlock Text="{Binding InventoryText}"/>
             </Border>
 
-            <!-- Status -->
             <Border Background="#114" CornerRadius="8" Padding="12" Height="140">
                 <ScrollViewer>
                     <TextBlock Text="{Binding StatusMessages}" FontFamily="Consolas, Menlo, monospace" TextWrapping="Wrap"/>

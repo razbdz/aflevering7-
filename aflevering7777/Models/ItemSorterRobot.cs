@@ -2,10 +2,7 @@ using System.Globalization;
 
 namespace aflevering7777
 {
-    /// <summary>
-    /// Henter fra a/b/c (1..3) og lægger i S.
-    /// x = 0.1 * id  (meter). Y/Z er faste for enkelhed som i opgaven.
-    /// </summary>
+
     public class ItemSorterRobot : Robot
     {
         public const string UrscriptTemplate = @"

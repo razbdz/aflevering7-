@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace aflevering7777
 {
-    // Minimal ViewModel så UI virker (uden afhængighed til dine Models)
+
     public class MainWindowViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<string> QueuedOrders { get; } = new();
@@ -35,7 +35,7 @@ namespace aflevering7777
 
         public MainWindowViewModel()
         {
-            // Demo-data så UI ikke er tomt
+
             QueuedOrders.Add("Order - 90,00 kr.");
             QueuedOrders.Add("Order - 70,00 kr.");
             InventoryText = "- M3 screw: 10\n- M3 nut: 20\n- pen: 15";
@@ -54,12 +54,12 @@ namespace aflevering7777
                 return;
             }
 
-            // Flyt første ordre fra kø til processed
+           
             var next = QueuedOrders[0];
             QueuedOrders.RemoveAt(0);
             ProcessedOrders.Add(next + "  (no-robot)");
 
-            // Demo: læg lidt til revenue
+           
             _totalRevenue += 10m;
             OnPropertyChanged(nameof(TotalRevenueText));
 
@@ -93,7 +93,7 @@ namespace aflevering7777
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 
-    // Lille async ICommand
+
     public class AsyncCommand : ICommand
     {
         private readonly Func<Task> _execute;

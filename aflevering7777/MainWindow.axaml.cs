@@ -10,11 +10,11 @@ namespace aflevering7777
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = _vm;              // Sæt DataContext KUN her
+            DataContext = _vm;              
             this.Title = "Item Sorter Robot (VM OK)";
         }
 
-        // Midlertidige click-handlere der bare kalder Commands direkte:
+        
         private void OnProcessNextOrder(object? sender, RoutedEventArgs e)
         {
             if (_vm.ProcessNextOrderCommand?.CanExecute(null) == true)
